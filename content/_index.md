@@ -1,127 +1,116 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ''
-summary: ''
-date: 2022-10-24
+title: ""
+summary: ""
+date: 2026-09-13
 type: landing
 
 sections:
   - block: resume-biography-3
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
       username: me
-      text: ''
-      # Show a call-to-action button under your biography? (optional)
+      text: ""
       button:
         text: Download CV
         url: uploads/resume.pdf
       headings:
-        about: ''
-        education: ''
-        interests: ''
+        about: About
+        education: Education
+        interests: Research Interests
     design:
-      # Use the new Gradient Mesh which automatically adapts to the selected theme colors
       background:
         gradient_mesh:
           enable: true
-
-      # Name heading sizing to accommodate long or short names
       name:
-        size: md # Options: xs, sm, md, lg (default), xl
-
-      # Avatar customization
+        size: md
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+        size: medium
+        shape: circle
+
   - block: markdown
+    id: research
     content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+      title: Research
+      text: |
+        My research focuses on **post-quantum cryptography, quantum-safe communication, and cryptographic protocols**, with particular interest in hybrid cryptographic architectures and their application to secure power-grid environments.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        I am currently working at the **Indian Institute of Science (IISc), Bengaluru**, as a Research Associate in the Information & Security Lab under the SPARKS Program. My current work involves developing a **Quantum-Safe Hybrid TLS Protocol** that combines classical and post-quantum cryptographic primitives.
 
-        Please reach out to collaborate 😃
+        My broader research interests include **TLS 1.3, cryptographic agility, symmetric cryptography, sparse modeling, signal processing, matrix estimation, and machine learning**.
     design:
-      columns: '1'
+      columns: "1"
+
+  - block: markdown
+    id: education
+    content:
+      title: Education
+      text: |
+        ### M.Tech in Data Science
+        **Indian Institute of Technology Palakkad** · *2023 – 2025*
+
+        **CGPA:** 8.14/10.0
+
+        **Thesis:** *Coherence Reduction in Sparse Modeling – A Hadamard Transform Approach*
+
+        ---
+
+        ### M.Sc in Mathematics
+        **Ramakrishna Mission Vivekananda Educational and Research Institute** · *2019 – 2021*
+
+        **CGPA:** 9.71/10.0
+
+        **Department Gold Medal** for Outstanding Academic Performance and Excellence in Mathematics.
+
+        ---
+
+        ### B.Sc in Mathematics (Honours)
+        **The University of Burdwan** · *2015 – 2018*
+
+        **Percentage:** 67.75%
+    design:
+      columns: "1"
+
+  - block: collection
+    id: projects
+    content:
+      title: Selected Research
+      filters:
+        folders:
+          - projects
+      count: 4
+    design:
+      view: card
+      columns: 2
+
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Publications
       filters:
         folders:
           - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
+      count: 5
     design:
       view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - events
-    design:
-      view: card
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: blog
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 10
-      # Filter on criteria
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: card
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
-  - block: cta-card
-    demo: true # Only display this section in the HugoBlox Kit demo site
-    content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by HugoBlox Kit - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
 
-        <a class="github-button" href="https://github.com/HugoBlox/kit" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/kit on GitHub">Star</a>
+  - block: markdown
+    id: experience
+    content:
+      title: Research Experience
+      text: |
+        ### Research Associate — Information & Security Lab
+        **Indian Institute of Science (IISc), Bengaluru** · *2026 – Present*
 
-        Easily build anything with blocks - no-code required!
+        Part of the **SPARKS Program**, working under Prof. Sanjit Chatterjee on developing a **Quantum-Safe Hybrid TLS Protocol** combining classical and post-quantum cryptographic primitives. Also investigating hybrid cryptographic architectures for quantum-safe communication in power-grid environments.
 
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+        ### IISc–ICASSP Fellowship
+        **Indian Institute of Science (IISc), Bengaluru** · *April 2025 – May 2025*
+
+        Worked on **Matrix Estimation Through Matrix-Vector Multiplication** under Prof. Chandra Sekhar Seelamantula.
+
+        ### Assistant Professor
+        **Dayananda Sagar University, Bengaluru** · *2025 – Present (On Leave)*
+
+        Teaching undergraduate courses in Artificial Intelligence, Machine Learning, and Data Science, while mentoring students and supervising undergraduate academic projects.
     design:
-      card:
-        # Card background color (CSS class)
-        css_class: 'bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-600 text-white shadow-2xl'
-        css_style: ''
+      columns: "1"
 ---
